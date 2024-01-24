@@ -26,5 +26,3 @@ Remember to update this readme file with your project description and routes.
 | GET | /users | Sends back an array of all the users |
 | GET | /users/:id | Sends back a single user object |
 | POST | /users | Creates a new user |
-
-SIMO SIMO SIMO
