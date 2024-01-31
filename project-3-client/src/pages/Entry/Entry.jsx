@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react"
 import { AuthContext } from "../../context/auth.context";
 import { useEffect } from "react";
-import Navbar from "../../components/Navbar/Navbar";
 
 function Entry() {
     const { user, setEntry } = useContext(AuthContext);
@@ -11,9 +10,9 @@ function Entry() {
     const [entryQuantity, setEntryQuantity] = useState("");
     const [entryDate, setEntryDate] = useState("");
 
-    //const handleEntryClient = (e) => setEntryClient(e.target.value);
-    //const handleEntryQuantity = (e) => setEntryQuantity(e.target.value);
-    // const handleEntryDate = (e) => setEntryDate(e.target.value);
+    const handleEntryClient = (e) => setEntryClient(e.target.value);
+    const handleEntryQuantity = (e) => setEntryQuantity(e.target.value);
+    const handleEntryDate = (e) => setEntryDate(e.target.value);
 
     const navigate = useNavigate();
 
@@ -43,29 +42,29 @@ function Entry() {
             const jsonEntry = await entry.json
             setEntry(jsonEntry)
 
-            //setEntryClient("");
-            //  setEntryQuantity("");
-            // setEntryDate("");
+            setEntryClient("");
+            setEntryQuantity("");
+            setEntryDate("");
             navigate('/')
         }
         catch (error) { console.log(error) }
     }
     return (
         <div className="Entry">
-            <Navbar />
             <h1>New Entry</h1>
             <form onSubmit={handleEntrySubmit}>
-
-                <label>Client:</label>
-                <input type="text" name="entryClient" value={name} onChange={handleEmail} />
-
-                <label for="expiringDate">Date:</label>
-                <input type="date" id="expiring-date" name="expiringDate" required />
-
-                <label>Name:</label>
-                <input type="text" name="name" value={name} onChange={handleName} />
-
-                <button type="submit">Create Entry</button>
+                <p>Client</p>
+                <input name="entryClient" required onChange={handleEntryClient}>
+                </input>
+                <p>Quantity</p>
+                <input name="entryQuantity" required onChange={handleEntryQuantity}>
+                </input>
+                <p>Date</p>
+                <input name="entryDate" required onChange={handleEntryDate}>
+                </input>
+                <br/>
+                <br/>
+                <button type="submit"> create entry </button>
             </form>
         </div>)
 }
