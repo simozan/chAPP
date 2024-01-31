@@ -21,5 +21,3 @@ Remember to update this readme file with your project description and routes.
 |--------|------|-------------|
 | UsersPage | /users | Display all the users|
 | UserDetails | /users/:id | Sends back a single user object |
-
-simo simo simo

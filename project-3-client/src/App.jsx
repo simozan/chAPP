@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import Navbar from "./components/Navbar/Navbar";
 import IsPrivate from "./components/IsPrivate/IsPrivate";
 import IsAnon from "./components/IsAnon/IsAnon";
+import Entry from "./pages/Entry/Entry";
 
 function App() {
   return (
@@ -17,6 +18,15 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+
+        <Route
+          path="/entry"
+          element={
+            <IsPrivate>
+              <Entry />
+            </IsPrivate>
+          }
+        />
 
         <Route
           path="/profile"
