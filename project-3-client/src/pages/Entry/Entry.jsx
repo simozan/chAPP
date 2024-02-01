@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/auth.context";
 import { useEffect } from "react";
 
 function Entry() {
-    const { user, setEntry } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const [entryClient, setEntryClient] = useState("");
     const [entryQuantity, setEntryQuantity] = useState("");
     const [entryDate, setEntryDate] = useState("");
@@ -32,15 +32,13 @@ function Entry() {
     const handleEntrySubmit = async (e) => {
         e.preventDefault()
         try {
-            const entry = await fetch(`${import.meta.env.VITE_SERVER_URL}/entry/create`, {
+            const entry = await fetch(`${import.meta.env.VITE_SERVER_URL}/entry"`, {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify({ entryClient: entryClient, entryQuantity: entryQuantity, entryDate: entryDate, entryOwner: user._id })
             })
-            const jsonEntry = await entry.json
-            setEntry(jsonEntry)
 
             setEntryClient("");
             setEntryQuantity("");
@@ -56,11 +54,11 @@ function Entry() {
                 <p>Client</p>
                 <input name="entryClient" required onChange={handleEntryClient}>
                 </input>
-                <p>Quantity</p>
-                <input name="entryQuantity" required onChange={handleEntryQuantity}>
+                <p>Quantity (€)</p>
+                <input type="number" name="entryQuantity" required onChange={handleEntryQuantity}>
                 </input>
                 <p>Date</p>
-                <input name="entryDate" required onChange={handleEntryDate}>
+                <input type="date" name="entryDate" required onChange={handleEntryDate}>
                 </input>
                 <br/>
                 <br/>
