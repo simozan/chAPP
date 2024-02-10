@@ -9,7 +9,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import Navbar from "./components/Navbar/Navbar";
 import IsPrivate from "./components/IsPrivate/IsPrivate";
 import IsAnon from "./components/IsAnon/IsAnon";
-import Entry from "./pages/CreateEntry/CreateEntry";
+import CreateEntry from "./pages/CreateEntry/CreateEntry";
 
 function App() {
   return (
@@ -20,10 +20,10 @@ function App() {
         <Route path="/" element={<HomePage />} />
 
         <Route
-          path="/entry"
+          path="/CreateEntry"
           element={
             <IsPrivate>
-              <Entry />
+              <CreateEntry/>
             </IsPrivate>
           }
         />
