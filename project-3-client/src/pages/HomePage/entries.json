@@ -1,52 +1,62 @@
 [
     {
       "entryClient": "Client1",
-      "entryQuantity": 100,
+      "entryHour": 1,
+      "entryEurosHour": 130,
       "entryDate": "2024-01-15"
     },
     {
       "entryClient": "Client2",
-      "entryQuantity": 150,
+      "entryHour": 2,
+      "entryEurosHour": 150,
       "entryDate": "2024-01-21"
     },
     {
       "entryClient": "Client3",
-      "entryQuantity": 200,
+      "entryHour": 1,
+      "entryEurosHour": 150,
       "entryDate": "2024-02-10"
     },
     {
       "entryClient": "Client4",
-      "entryQuantity": 120,
+      "entryHour": 3,
+      "entryEurosHour": 150,
       "entryDate": "2024-02-05"
     },
     {
       "entryClient": "Client5",
-      "entryQuantity": 180,
+      "entryHour": 1,
+      "entryEurosHour": 150,
       "entryDate": "2024-03-15"
     },
     {
       "entryClient": "Client6",
-      "entryQuantity": 90,
+      "entryHour": 6,
+      "entryEurosHour": 150,
       "entryDate": "2024-03-08"
     },
     {
       "entryClient": "Client7",
-      "entryQuantity": 110,
+      "entryHour": 3,
+      "entryEurosHour": 120,
       "entryDate": "2024-04-20"
     },
     {
       "entryClient": "Client8",
-      "entryQuantity": 130,
+      "entryHour": 1,
+      "entryEurosHour": 170,
       "entryDate": "2024-04-12"
     },
     {
       "entryClient": "Client9",
-      "entryQuantity": 160,
+      "entryHour": 3,
+      "entryEurosHour": 120,
       "entryDate": "2024-05-25"
     },
     {
       "entryClient": "Client10",
-      "entryQuantity": 140,
+      "entryHour": 3,
+      "entryEurosHour": 150,
       "entryDate": "2024-05-07"
     }
   ]

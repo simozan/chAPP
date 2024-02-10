@@ -10,15 +10,18 @@ const entrySchema = new Schema(
             type: String,
             required: [true, "Entry Client is required."],
         },
-        entryQuantity: {
+        entryHours: {
             type: Number,
-            required: [true, "Entry quantity is required."],
+            required: [true, "Entry Hours is required."],
+        },
+        entryEurosHour: {
+            type: Number,
+            required: [true, "Entry €/h is required."],
         },
         entryDate: {
             type: String,
             required: [true, "Entry date is required."],
         }
-
     }
 );
 

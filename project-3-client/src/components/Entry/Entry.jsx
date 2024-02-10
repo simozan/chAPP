@@ -1,9 +1,14 @@
 import "./Entry.css";
 function Entry(props) {
-    return(<div>
-        <p>{props.entryClient.charAt(0).toUpperCase()+props.entryClient.slice(1)}</p>
-        <p>{props.entryQuantity}</p>
-        <p>{props.entryDate}</p>
-    </div>)
+const entryTotal = props.entryHour*props.entryEurosHour
+    return (
+        <div className="TableLine">
+            <p className="Dimensions">{props.entryDate}</p>
+            <p className="Dimensions">{props.entryClient.charAt(0).toUpperCase() + props.entryClient.slice(1)}</p>
+            <p className="Dimensions">{props.entryEurosHour} €</p>
+            <p className="Dimensions">{props.entryHour} h</p>
+            <p className="Dimensions">{entryTotal} €</p>
+        </div>
+    )
 }
 export default Entry;

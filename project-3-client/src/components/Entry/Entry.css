@@ -1,0 +1,10 @@
+.TableLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Dimensions{
+width: 100px;
+height: 30px;
+}

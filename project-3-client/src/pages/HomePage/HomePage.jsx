@@ -9,47 +9,25 @@ function HomePage() {
   return (
     <div>
       <h1>Hello {user.name.charAt(0).toUpperCase() + user.name.slice(1)}</h1>
-      {entriesdatas.map((eachEntry) => {
-        return (
-          <div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Column 1</th>
-                  <th>Date</th>
-                  <th>Client</th>
-                  <th>Quantity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Row 1</td>
-                  <td>Row 1</td>
-                  <td>Row 1</td>
-                </tr>
-                <tr>
-                  <td>Row 2</td>
-                  <td>Row 2</td>
-                </tr>
-                <tr>
-                  <td>Row 3</td>
-                  <td>Row 3</td>
-                  <td>Row 3</td>
-                </tr>
-                <tr>
-                  <td>Row 4</td>
-                  <td>Row 4</td>
-                </tr>
-              </tbody>
-            </table>
+      <div>
+        <div className="TableLine">
+          <p className="Dimensions">Date</p>
+          <p className="Dimensions">Client</p>
+          <p className="Dimensions">€/h</p>
+          <p className="Dimensions">Hours</p>
+          <p className="Dimensions">Total</p>
+        </div>
+        {entriesdatas.map((eachEntry) => {
+          return (
             <Entry
               entryClient={eachEntry.entryClient}
-              entryQuantity={eachEntry.entryQuantity}
+              entryHour={eachEntry.entryHour}
+              entryEurosHour={eachEntry.entryEurosHour}
               entryDate={eachEntry.entryDate}
             />
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
       <Link to="/CreateEntry">
         <button>Create entry</button>
       </Link>
